@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-
-    <title>GameHoliday</title>
+    <title>GameHoliday - Liste questions</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,27 +12,231 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet"> 
+    <link href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/gamification.png">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
   <body class=" text-center bg-dark">
+    <ul class="nav nav-tabs justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link text-white" aria-current="page" href="index.html">Page d'accueil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="game.html">Jeux</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active text-dark" href="config.html">Config</a>
+      </li>
+    </ul>
     <div class="mx-auto">
-        <div class="center" style="margin-top: 50vh; transform: translateY(-50%); font-family: 'Montserrat', sans-serif;">
+        <div class="center" style="margin-top: 30vh; transform: translateY(-50%);">
           <div>
             <h1 class="display-1 text-white">Liste des questions par thème</h1>
           </div>
           <div class="p-5"> 
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" aria-label="Default select example" name="action" onchange="afficher(this)">
               <option selected>Choisi un thème</option>
-              <option value="1">Culture Générale</option>
-              <option value="2">Pixel</option>
-              <option value="3">Musique</option>
-              <option value="4">Dessin Animé</option>
-              <option value="5">Sport</option>
-              <option value="6">Voyage</option>
+              <option value="cultureG">Culture Générale</option>
+              <option value="pixel">Pixel</option>
+              <option value="musique">Musique</option>
+              <option value="dessin">Dessin Animé</option>
+              <option value="sport">Sport</option>
+              <option value="voyage">Voyage</option>
             </select>
           </div>
+          <div>
+            <!-- culture générale -->
+            <div id="cultureG" style="display: none;" class="container bg-light text-center pt-3" >
+              <table class="table table-striped cultureG">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Question</th>
+                    <th scope="col">Reponse</th>
+                    <th scope="col">Proposition 1</th>
+                    <th scope="col">Proposition 2</th>
+                    <th scope="col">Proposition 3</th>
+                    <th scope="col">Points</th>
+                    <th scope="col" colspan="2">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+            </div>
+            <!-- pixel -->
+            <div id="pixel" style="display: none;" class="container bg-light text-center pt-3" >
+              <table class="table table-striped pixel">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Question</th>
+                    <th scope="col">Reponse</th>
+                    <th scope="col">Proposition 1</th>
+                    <th scope="col">Proposition 2</th>
+                    <th scope="col">Proposition 3</th>
+                    <th scope="col">Points</th>
+                    <th scope="col" colspan="2">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+            </div>
+            <!-- musique -->
+            <div id="musique" style="display: none;" class="container bg-light text-center pt-3" >
+              <table class="table table-striped musique">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Question</th>
+                    <th scope="col">Reponse</th>
+                    <th scope="col">Proposition 1</th>
+                    <th scope="col">Proposition 2</th>
+                    <th scope="col">Proposition 3</th>
+                    <th scope="col">Points</th>
+                    <th scope="col" colspan="2">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+            </div>
+            <!-- dessin animée -->
+            <div id="dessin" style="display: none;" class="container bg-light text-center pt-3" >
+              <table class="table table-striped dessin">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Question</th>
+                    <th scope="col">Reponse</th>
+                    <th scope="col">Proposition 1</th>
+                    <th scope="col">Proposition 2</th>
+                    <th scope="col">Proposition 3</th>
+                    <th scope="col">Points</th>
+                    <th scope="col" colspan="2">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+            </div>
+            <!-- sport -->
+            <div id="sport" style="display: none;" class="container bg-light text-center pt-3" >
+              <table class="table table-striped sport">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Question</th>
+                    <th scope="col">Reponse</th>
+                    <th scope="col">Proposition 1</th>
+                    <th scope="col">Proposition 2</th>
+                    <th scope="col">Proposition 3</th>
+                    <th scope="col">Points</th>
+                    <th scope="col" colspan="2">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+            </div>
+            <!-- voyage -->
+            <div id="voyage" style="display: none;" class="container bg-light text-center pt-3" >
+              <table class="table table-striped voyage">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Question</th>
+                    <th scope="col">Reponse</th>
+                    <th scope="col">Proposition 1</th>
+                    <th scope="col">Proposition 2</th>
+                    <th scope="col">Proposition 3</th>
+                    <th scope="col">Points</th>
+                    <th scope="col" colspan="2">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
        </div>
-    </div>   
+       <button type="button" id="openModal" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addQuestion"><i class="bi bi-plus-square"></i> Ajouter une question</button>
+       <a href="supprimer.html"><button type="button"  class="btn btn-danger ms-4"><i class="bi bi-dash-square"></i> Supprimer une question</button></a>
+      <!-- Modal Insert Question -->
+      <div id="addQuestion" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="ajouterQuestion">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-white">
+            <div class="modal-header">
+              <h5 class="modal-title" id="ajouterQuestion">Ajouter une question</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <select id="questionTheme" class="form-select text-center" aria-label="Default select example" name="action" onchange="afficherTypeQuestion(this)">
+                    <option selected>Thèmes :</option>
+                    <option value="CultureG">Culture Générale</option>
+                    <option value="Pixel">Image pixel</option>
+                    <option value="Dessin">Dessin Animée</option>
+                    <option value="Musique">Musique</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Voyage">Voyage</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="questionAjouter" class="form-label">Question :</label>
+                  <input type="text" class="form-control" id="questionAjouter">
+                </div>
+                <div class="mb-3">
+                  <label for="questionReponse" class="form-label">Reponse :</label>
+                  <input type="text" class="form-control" id="questionReponse">
+                </div>
+                <div class="mb-3" id="proposition1">
+                  <label for="questionProposition" class="form-label">Proposition 1 :</label>
+                  <input type="text" class="form-control" id="questionProposition">
+                </div>
+                <div class="mb-3" id="proposition2">
+                  <label for="questionProposition2" class="form-label">Proposition 2 :</label>
+                  <input type="text" class="form-control" id="questionProposition2">
+                </div>
+                <div class="mb-3" id="proposition3"> 
+                  <label for="questionProposition3" class="form-label">Proposition 3 :</label>
+                  <input type="text" class="form-control" id="questionProposition3">
+                </div>
+                <div class="mb-3">
+                  <select id="questionPoint" class="form-select text-center" aria-label="Default select example">
+                    <option selected>Selectionnez le nombre de points : </option>
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="300">300</option>
+                    <option value="400">400</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="questionLien" class="form-label">Lien :</label>
+                  <input type="text" class="form-control" id="questionLien">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fermer</button>
+              <button type="button" class="btn btn-primary" id="insertQuestion">Ajouter la question</button>
+              <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/config.js"></script>
   </body>
 </html>

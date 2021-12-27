@@ -7,16 +7,35 @@
 
     <title>GameHoliday - Game</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- CSS -->
     <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Fonts -->
+    <link href="../css/game.css" rel="stylesheet">
+    <!-- JavaScript -->
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/pixelate.js"></script>
+    <!-- Fonts & icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet"> 
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/gamepad.png">
+    <style>
+      html { overflow-y: hidden; } 
+    </style>
   </head>
   <body class=" text-center bg-dark text-white">
+    <ul class="nav nav-tabs justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link text-white" aria-current="page" href="index.html">Page d'accueil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark active" href="game.html">Jeux</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="config.html">Config</a>
+      </li>
+    </ul>
     <div class="mx-auto">
         <div class="center p-3" style="margin-top: 50vh; transform: translateY(-50%); font-family: 'Montserrat', sans-serif;">
           <div>
@@ -59,233 +78,291 @@
           <!-- Question 1 -->
 
           <div class="row pt-5 px-3" id="question1">
-            <div class="col border rounded border-white pt-3 m-2" id="themeCultureG" style="background-color: #16A085;">
-              <p>
-                100
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-primary m-2" id="themePhotoPixel">
-              <p>
-                100
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 m-2" id="themeMusique" style="background-color: #E74C3C;">
-              <p>
-                100
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-warning m-2" id="themeDessinAnime">
-              <p>
-                100
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-info m-2" id="themeSport">
-              <p>
-                100
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 m-2" style="background-color: #5E35B1;" id="themeVoyage">
-              <p>
-                100
-              </p>
-            </div>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="1" data-theme="CultureG" data-point="100" class="col border rounded border-white pt-3 m-2 themeCultureG" style="background-color: #16A085; color: inherit; text-decoration: none;">
+              <div>
+                <p>100</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="1" data-theme="Pixel" data-point="100" class="col border rounded border-white pt-3 bg-primary m-2 themePhotoPixel" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>100</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="1" data-theme="Musique" data-point="100" class="col border rounded border-white pt-3 m-2 themeMusique" style="color: inherit; text-decoration: none;background-color: #E74C3C;">
+              <div>
+                <p>100</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="1" data-theme="Dessin" data-point="100" class="col border rounded border-white pt-3 bg-warning m-2 themeDessinAnime" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>100</p>
+              </div>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="1" data-theme="Sport" data-point="100" class="col border rounded border-white pt-3 bg-info m-2 themeSport" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>100</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="1" data-theme="Voyage" data-point="100" class="col border rounded border-white pt-3 m-2 themeVoyage" style="color: inherit; text-decoration: none;background-color: #5E35B1;">
+              <div>
+                <p>100</p>
+              </div>
+            </a>
           </div>
 
           <!-- Question 2 -->
 
           <div class="row px-3" id="question2">
-            <div class="col border rounded border-white pt-3 m-2" id="themeCultureG" style="background-color: #16A085;">
-              <p>
-                200
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-primary m-2" id="themePhotoPixel">
-              <p>
-                200
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 m-2" id="themeMusique" style="background-color: #E74C3C;">
-              <p>
-                200
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-warning m-2" id="themeDessinAnime">
-              <p>
-                200
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-info m-2" id="themeSport">
-              <p>
-                200
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 m-2" style="background-color: #5E35B1;" id="themeVoyage">
-              <p>
-                200
-              </p>
-            </div>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="2" data-theme="CultureG" data-point="200" class="col border rounded border-white pt-3 m-2 themeCultureG" style="background-color: #16A085; color: inherit; text-decoration: none;">
+              <div>
+                <p>200</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="2" data-theme="Pixel" data-point="200" class="col border rounded border-white pt-3 bg-primary m-2 themePhotoPixel" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>200</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="2" data-theme="Musique" data-point="200" class="col border rounded border-white pt-3 m-2 themeMusique" style="color: inherit; text-decoration: none;background-color: #E74C3C;">
+              <div>
+                <p>200</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="2" data-theme="Dessin" data-point="200" class="col border rounded border-white pt-3 bg-warning m-2 themeDessinAnime" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>200</p>
+              </div>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="2" data-theme="Sport" data-point="200" class="col border rounded border-white pt-3 bg-info m-2 themeSport" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>200</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="2" data-theme="Voyage" data-point="200" class="col border rounded border-white pt-3 m-2 themeVoyage" style="color: inherit; text-decoration: none;background-color: #5E35B1;">
+              <div>
+                <p>200</p>
+              </div>
+            </a>
           </div>
 
           <!-- Question 3 -->
 
           <div class="row px-3" id="question3">
-            <div class="col border rounded border-white pt-3 m-2" id="themeCultureG" style="background-color: #16A085;">
-              <p>
-                300
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-primary m-2" id="themePhotoPixel">
-              <p>
-                300
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 m-2" id="themeMusique" style="background-color: #E74C3C;">
-              <p>
-                300
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-warning m-2" id="themeDessinAnime">
-              <p>
-                300
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-info m-2" id="themeSport">
-              <p>
-                300
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 m-2" style="background-color: #5E35B1;" id="themeVoyage">
-              <p>
-                300
-              </p>
-            </div>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="3" data-theme="CultureG" data-point="300" class="col border rounded border-white pt-3 m-2 themeCultureG" style="background-color: #16A085; color: inherit; text-decoration: none;">
+              <div>
+                <p>300</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="3" data-theme="Pixel" data-point="300" class="col border rounded border-white pt-3 bg-primary m-2 themePhotoPixel" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>300</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="3" data-theme="Musique" data-point="300" class="col border rounded border-white pt-3 m-2 themeMusique" style="color: inherit; text-decoration: none;background-color: #E74C3C;">
+              <div>
+                <p>300</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="3" data-theme="Dessin" data-point="300" class="col border rounded border-white pt-3 bg-warning m-2 themeDessinAnime" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>300</p>
+              </div>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="3" data-theme="Sport" data-point="300" class="col border rounded border-white pt-3 bg-info m-2 themeSport" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>300</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="3" data-theme="Voyage" data-point="300" class="col border rounded border-white pt-3 m-2 themeVoyage" style="color: inherit; text-decoration: none;background-color: #5E35B1;">
+              <div>
+                <p>300</p>
+              </div>
+            </a>
           </div>
 
           <!-- Question 4 -->
 
           <div class="row px-3" id="question4">
-            <div class="col border rounded border-white pt-3 m-2" id="themeCultureG" style="background-color: #16A085;">
-              <p>
-               400
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-primary m-2" id="themePhotoPixel">
-              <p>
-                400
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 m-2" id="themeMusique" style="background-color: #E74C3C;">
-              <p>
-                400
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-warning m-2" id="themeDessinAnime">
-              <p>
-                400
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-info m-2" id="themeSport">
-              <p>
-                400
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 m-2" style="background-color: #5E35B1;" id="themeVoyage">
-              <p>
-                400
-              </p>
-            </div>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="4" data-theme="CultureG" data-point="400" class="col border rounded border-white pt-3 m-2 themeCultureG" style="background-color: #16A085; color: inherit; text-decoration: none;">
+              <div>
+                <p>400</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="4" data-theme="Pixel" data-point="400" class="col border rounded border-white pt-3 bg-primary m-2 themePhotoPixel" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>400</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="4" data-theme="Musique" data-point="400" class="col border rounded border-white pt-3 m-2 themeMusique" style="color: inherit; text-decoration: none;background-color: #E74C3C;">
+              <div>
+                <p>400</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="4" data-theme="Dessin" data-point="400" class="col border rounded border-white pt-3 bg-warning m-2 themeDessinAnime" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>400</p>
+              </div>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="4" data-theme="Sport" data-point="400" class="col border rounded border-white pt-3 bg-info m-2 themeSport" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>400</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="4" data-theme="Voyage" data-point="400" class="col border rounded border-white pt-3 m-2 themeVoyage" style="color: inherit; text-decoration: none;background-color: #5E35B1;">
+              <div>
+                <p>400</p>
+              </div>
+            </a>
           </div>
 
           <!-- Question 5 -->
 
           <div class="row px-3" id="question5">
-            <div class="col border rounded border-white pt-3 m-2" id="themeCultureG" style="background-color: #16A085;">
-              <p>
-                500
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-primary m-2" id="themePhotoPixel">
-              <p>
-                500
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 m-2" id="themeMusique" style="background-color: #E74C3C;">
-              <p>
-                500
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-warning m-2" id="themeDessinAnime">
-              <p>
-                500
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-info m-2" id="themeSport">
-              <p>
-                500
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 m-2" style="background-color: #5E35B1;" id="themeVoyage">
-              <p>
-                500
-              </p>
-            </div>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="5" data-theme="CultureG" data-point="500" class="col border rounded border-white pt-3 m-2 themeCultureG" style="background-color: #16A085; color: inherit; text-decoration: none;">
+              <div>
+                <p>500</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="5" data-theme="Pixel" data-point="500" class="col border rounded border-white pt-3 bg-primary m-2 themePhotoPixel" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>500</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="5" data-theme="Musique" data-point="500" class="col border rounded border-white pt-3 m-2 themeMusique" style="color: inherit; text-decoration: none;background-color: #E74C3C;">
+              <div>
+                <p>500</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="5" data-theme="Dessin" data-point="500" class="col border rounded border-white pt-3 bg-warning m-2 themeDessinAnime" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>500</p>
+              </div>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="5" data-theme="Sport" data-point="500" class="col border rounded border-white pt-3 bg-info m-2 themeSport" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>500</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="5" data-theme="Voyage" data-point="500" class="col border rounded border-white pt-3 m-2 themeVoyage" style="color: inherit; text-decoration: none;background-color: #5E35B1;">
+              <div>
+                <p>500</p>
+              </div>
+            </a>
           </div>
 
           <!-- Question 6 -->
 
           <div class="row px-3" id="question6">
-            <div class="col border rounded border-white pt-3 m-2" id="themeCultureG" style="background-color: #16A085;">
-              <p>
-                1000
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-primary m-2" id="themePhotoPixel">
-              <p>
-                1000
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 m-2" id="themeMusique" style="background-color: #E74C3C;">
-              <p>
-                1000
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-warning m-2" id="themeDessinAnime">
-              <p>
-                1000
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 bg-info m-2" id="themeSport">
-              <p>
-                1000
-              </p>
-            </div>
-            <div class="col border rounded border-white pt-3 m-2" style="background-color: #5E35B1;" id="themeVoyage">
-              <p>
-                1000
-              </p>
-            </div>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="6" data-theme="CultureG" data-point="1000" class="col border rounded border-white pt-3 m-2 themeCultureG" style="background-color: #16A085; color: inherit; text-decoration: none;">
+              <div>
+                <p>1000</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="6" data-theme="Pixel" data-point="1000" class="col border rounded border-white pt-3 bg-primary m-2 themePhotoPixel" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>1000</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="6" data-theme="Musique" data-point="1000" class="col border rounded border-white pt-3 m-2 themeMusique" style="color: inherit; text-decoration: none;background-color: #E74C3C;">
+              <div>
+                <p>1000</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="6" data-theme="Dessin" data-point="1000" class="col border rounded border-white pt-3 bg-warning m-2 themeDessinAnime" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>1000</p>
+              </div>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="6" data-theme="Sport" data-point="1000" class="col border rounded border-white pt-3 bg-info m-2 themeSport" style="color: inherit; text-decoration: none;">
+              <div>
+                <p>1000</p>
+              </div>
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#afficherQuestion" data-question="6" data-theme="Voyage" data-point="1000" class="col border rounded border-white pt-3 m-2 themeVoyage" style="color: inherit; text-decoration: none;background-color: #5E35B1;">
+              <div>
+                <p>1000</p>
+              </div>
+            </a>
           </div>
           <div class="text-center bg-dark p-5">
               <h1>SCORES</h1>
             <div>
               <div class="row p-3" id="score">
-                <div class="col border rounded border-white pt-3 m-2" id="themeCultureG" style="background-color: #2C3E50;">
+                <div class="col border rounded border-white pt-3 m-2" style="background-color: #2C3E50;">
                   <p>Equipe 1</p>
-                  <p>XXX</p>
+                  <p id="scoreEquipe1">XXX</p>
                 </div>
-                <div class="col border rounded border-white pt-3 m-2" id="themeCultureG" style="background-color: #2C3E50;">
+                <div class="col border rounded border-white pt-3 m-2" style="background-color: #2C3E50;">
                   <p>Equipe 2</p>
-                  <p>XXX</p>
+                  <p id="scoreEquipe2">XXX</p>
                 </div>
-                <div class="col border rounded border-white pt-3 m-2" id="themeCultureG" style="background-color: #2C3E50;">
+                <div class="col border rounded border-white pt-3 m-2" style="background-color: #2C3E50;">
                   <p>Equipe 3</p>
-                  <p>XXX</p>
+                  <p id="scoreEquipe3">XXX</p>
                 </div>
               </div>
              </div>
           </div>
+          <div class="text-center bg-dark p-1">
+            <button type="button" class="btn btn-outline-warning" id="reset"> <i class="bi bi-bootstrap-reboot"></i> RESET</button>
+          </div>
         </div>
        </div>
     </div>   
+    
+     <!-- Modal Afficher Question -->
+     <div id="afficherQuestion" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="afficherQuestion">
+      <div class="modal-dialog modal-dialog-centered modal-dialog modal-fullscreen">
+        <div class="modal-content bg-dark">
+          <div class="modal-header text-center">
+            <h5 class="modal-title" id="numQuestion"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="closeModal"></button>
+          </div>
+          <div class="modal-body bg">
+            <div class="card mb-3 bg-dark">
+              <img src="" class="rounded mx-auto" width="250px" height="250px" id="imageQuestion" style="display: block;">
+              <div id="musiqueQuestion" class="mt-5" style="display:none;justify-content:center;align-items:center;">
+                <figure>
+                  <audio id="musiqueLecteur"
+                      controls
+                      src="">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                  </audio>
+                </figure>
+              </div>
+              <div class="card-body mt-5">
+                <h5 class="card-title mt-5 mb-5" id="questionAposer" style="font-size:6rem;">test</h5>
+                <div id="choixReponse" class="bg-dark mt-5" style="display: block;">
+                  <button type="button" class="btn btn-primary btn-lg" id="cash" style="font-size: 4rem;">CASH</button>
+                  <button type="button" class="btn btn-primary btn-lg ms-5" id="carre" style="font-size: 4rem;">CARRE</button>
+                  <button type="button" class="btn btn-primary btn-lg ms-5" id="duo" style="font-size: 4rem;">DUO</button>
+                </div>
+                <div id="propositionReponseDuo" style="display: none; font-size: 5rem; ">
+                  <button type="button" class="btn btn-light btn-lg me-2" id="reponseDuo1"></button>
+                  <button type="button" class="btn btn-light btn-lg ms-2" id="reponseDuo2"></button>
+                </div>
+                <div id="propositionReponseCarre" class="mt-5" style="font-size: 30px; display: none;">
+                  <div class="bg-dark">
+                    <button type="button" class="btn btn-light btn-lg me-2" id="reponseCarre1"></button>
+                    <button type="button" class="btn btn-light btn-lg ms-2" id="reponseCarre2"></button>
+                  </div>
+                  <div class="bg-dark">
+                    <button type="button" class="btn btn-light btn-lg me-2 mt-4" id="reponseCarre3"></button>
+                    <button type="button" class="btn btn-light btn-lg ms-2 mt-4" id="reponseCarre4"></button>
+                  </div>
+                </div>
+                <p id="reponseQuestion" class="fs-2 fw-bold text-decoration-underline" style="display: none;"></p>
+                <p id="pointsQuestion" style="display: none;"></p>
+                <div id="propositionReponseCash" style="display: none; font-size: 5rem; ">
+                  <button type="button" class="btn btn-info btn-lg me-2" id="btn-AfficherReponse">Afficher la réponse</button>
+                </div>
+                <img class="pixelate rounded mx-auto" id="pixelImage" src="" width="410px" height="410px">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary" id="equipe1">Equipe 1</button>
+            <button type="button" class="btn btn-outline-primary" id="equipe2">Equipe 2</button>
+            <button type="button" class="btn btn-outline-primary" id="equipe3">Equipe 3</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/game.js"></script>
   </body>
 </html>
